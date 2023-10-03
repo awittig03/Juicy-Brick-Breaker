@@ -20,16 +20,35 @@ size = Vector2(1224, 200)
 [node name="Game" type="Node2D"]
 script = ExtResource("4")
 
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="HUD" parent="UI" instance=ExtResource("7")]
+visible = false
+
+[node name="Pause_Menu" parent="UI" instance=ExtResource("5")]
+process_mode = 3
+visible = false
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Instructions" parent="UI" instance=ExtResource("8")]
+offset_left = -2.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = 2.0
+
 [node name="Wall_Container" type="Node2D" parent="."]
 
 [node name="Wall_Left" type="StaticBody2D" parent="Wall_Container"]
 script = ExtResource("6")
 
 [node name="ColorRect" type="ColorRect" parent="Wall_Container/Wall_Left"]
+color = Color(0.733333, 0.101961, 0.364706, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Wall_Container/Wall_Left"]
-position = Vector2(-90, 400)
+position = Vector2(-93, 395)
 shape = SubResource("1")
+debug_color = Color(0.239216, 0.505882, 1, 1)
 
 [node name="Wall_Right" type="StaticBody2D" parent="Wall_Container"]
 position = Vector2(1152, 2.08165e-12)
@@ -38,8 +57,9 @@ script = ExtResource("6")
 [node name="ColorRect" type="ColorRect" parent="Wall_Container/Wall_Right"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Wall_Container/Wall_Right"]
-position = Vector2(90, 400)
+position = Vector2(101, 383)
 shape = SubResource("1")
+debug_color = Color(0.207843, 0.513726, 1, 1)
 
 [node name="Wall_Top" type="StaticBody2D" parent="Wall_Container"]
 script = ExtResource("6")
@@ -47,8 +67,9 @@ script = ExtResource("6")
 [node name="ColorRect" type="ColorRect" parent="Wall_Container/Wall_Top"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Wall_Container/Wall_Top"]
-position = Vector2(512, -90)
+position = Vector2(567, -99)
 shape = SubResource("2")
+debug_color = Color(0.439216, 0.521569, 0.784314, 1)
 
 [node name="Brick_Container" type="Node2D" parent="."]
 script = ExtResource("1")
@@ -68,21 +89,8 @@ script = ExtResource("9")
 
 [node name="Timer" type="Timer" parent="Fever"]
 
-[node name="UI" type="CanvasLayer" parent="."]
-
-[node name="HUD" parent="UI" instance=ExtResource("7")]
-visible = false
-
-[node name="Pause_Menu" parent="UI" instance=ExtResource("5")]
-process_mode = 3
-visible = false
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Instructions" parent="UI" instance=ExtResource("8")]
-
 [node name="Camera" type="Camera2D" parent="."]
-position = Vector2(575, 400)
+position = Vector2(588, 398)
 script = ExtResource("10_u5pwq")
 
 [connection signal="timeout" from="Fever/Timer" to="Fever" method="_on_Timer_timeout"]
