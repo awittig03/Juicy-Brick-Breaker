@@ -1,5 +1,5 @@
 # Project Name
-
+Juicy Brick Breaker
 Context and date
 
 Description
@@ -17,3 +17,4 @@ https://thenounproject.com/icon/confetti-5348742/
 
 
 ## Created by
+Alyssa Wittig
