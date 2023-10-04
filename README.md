@@ -17,8 +17,6 @@ https://thenounproject.com/icon/confetti-5348742/
 
 ## Future Development
 add power ups
-add music
-add sound effects
 add new background 
 
 ## Created by
