@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bd5m3yq1k5fx8"]
+[gd_scene load_steps=17 format=3 uid="uid://bd5m3yq1k5fx8"]
 
 [ext_resource type="Script" path="res://Brick/Brick_Container.gd" id="1"]
 [ext_resource type="PackedScene" uid="uid://dmwf8wjdir6y5" path="res://Paddle/Paddle.tscn" id="2"]
@@ -10,6 +10,10 @@
 [ext_resource type="PackedScene" uid="uid://r1nm10jeqyta" path="res://UI/Instructions.tscn" id="8"]
 [ext_resource type="Script" path="res://Effects/Fever.gd" id="9"]
 [ext_resource type="Script" path="res://Camera.gd" id="10_u5pwq"]
+[ext_resource type="AudioStream" uid="uid://cxhpikq1o851i" path="res://Assets/music game 3.mp3" id="11_gd5ju"]
+[ext_resource type="AudioStream" uid="uid://b4xbxcwx31upb" path="res://Assets/bmo chrip 1.wav" id="12_qm1l0"]
+[ext_resource type="AudioStream" uid="uid://dnpknw38tqlps" path="res://Assets/bmo chrip 3.wav" id="13_48deo"]
+[ext_resource type="AudioStream" uid="uid://nn4c4u6dwjx0" path="res://Assets/bmo death sound.wav" id="14_rc8tm"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(200, 1000)
@@ -92,5 +96,18 @@ script = ExtResource("9")
 [node name="Camera" type="Camera2D" parent="."]
 position = Vector2(588, 398)
 script = ExtResource("10_u5pwq")
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_gd5ju")
+autoplay = true
+
+[node name="Paddle_Sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_qm1l0")
+
+[node name="Brick_Sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_48deo")
+
+[node name="Die_Sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_rc8tm")
 
 [connection signal="timeout" from="Fever/Timer" to="Fever" method="_on_Timer_timeout"]

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b4xbxcwx31upb"
+path="res://.godot/imported/bmo chrip 1.wav-07fddd21fbb4f751a6896d24e9550e39.sample"
+
+[deps]
+
+source_file="res://Assets/bmo chrip 1.wav"
+dest_files=["res://.godot/imported/bmo chrip 1.wav-07fddd21fbb4f751a6896d24e9550e39.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

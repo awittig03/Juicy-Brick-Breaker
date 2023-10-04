@@ -57,6 +57,8 @@ func _integrate_forces(state):
 		state.linear_velocity = state.linear_velocity.normalized() * max_speed
 
 func die():
+	var die_sound = get_node("/root/Game/Die_Sound")
+	die_sound.play()
 	queue_free()
 
 func wobble():

@@ -20,6 +20,8 @@ func _input(event):
 		target.x += event.relative.x
 
 func hit(_ball):
+	var Paddle_sound = get_node("/root/Game/Paddle_Sound")
+	Paddle_sound.play()
 	$Confetti.emitting = true
 	if tween:
 		tween.kill()

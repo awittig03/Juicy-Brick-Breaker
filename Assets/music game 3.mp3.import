@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cxhpikq1o851i"
+path="res://.godot/imported/music game 3.mp3-f5209f9d01da5aadc45eea077bfff329.mp3str"
+
+[deps]
+
+source_file="res://Assets/music game 3.mp3"
+dest_files=["res://.godot/imported/music game 3.mp3-f5209f9d01da5aadc45eea077bfff329.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

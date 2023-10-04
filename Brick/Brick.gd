@@ -11,6 +11,17 @@ var time_s = 1.2
 var time_v = 1.5
 var tween
 
+var colors =[
+	Color8(224,49,49)
+	,Color8(190,75,219)
+	,Color8(132,94,247)
+	,Color8(148,216,45)
+	,Color8(148,216,45)
+	,Color8(132,94,247)
+	,Color8(190,75,219)
+	,Color8(224,49,49)
+]
+
 func _ready():
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	position.x = new_position.x
@@ -42,6 +53,8 @@ func hit(_ball):
 	die()
 
 func die():
+	var Brick_Sound = get_node("/root/Game/Brick_Sound")
+	Brick_Sound.play()
 	dying = true
 	$CollisionShape2D.queue_free()
 	Global.update_score(score)
