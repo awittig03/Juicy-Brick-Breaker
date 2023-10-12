@@ -1,10 +1,9 @@
-# Project Name
-Juicy Brick Breaker
+# Juicy Brick Breaker
 
 Context and date
 10/3/2023 
 
-Description
+Description:
 Brick breaker game with lots of action, crazy sounds, different animations, fun colors and cool pixle art!
 
 ## Implementation
@@ -18,7 +17,7 @@ https://www.audacityteam.org/
 https://musescore.org/en
 
 ## References
-
+Pixle art around skate parks, and pixle cat fetchers
 
 ## Future Development
 
