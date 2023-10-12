@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dmwf8wjdir6y5"]
+[gd_scene load_steps=7 format=3 uid="uid://dmwf8wjdir6y5"]
 
 [ext_resource type="Script" path="res://Paddle/Paddle.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://dqwk5pxbfu7ys" path="res://Assets/scaket.png" id="2_187v8"]
 [ext_resource type="Texture2D" uid="uid://dulwbuwvt54yc" path="res://Assets/fire.png" id="3_oe5d6"]
+[ext_resource type="Texture2D" uid="uid://bs5omgj5u4ldc" path="res://Assets/New Piskel (1).png" id="5_wstnd"]
+[ext_resource type="Texture2D" uid="uid://biv1tytjk6ewj" path="res://Assets/nose.png" id="6_vt5jm"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(120, 29)
@@ -43,3 +45,26 @@ angular_velocity_max = 100.0
 radial_accel_max = 100.0
 scale_amount_min = 0.2
 scale_amount_max = 0.2
+
+[node name="Eye1" type="Sprite2D" parent="."]
+position = Vector2(-20, -3)
+
+[node name="Pupil" type="Node2D" parent="Eye1"]
+
+[node name="Sprite" type="Sprite2D" parent="Eye1/Pupil"]
+position = Vector2(3, -3)
+texture = ExtResource("5_wstnd")
+
+[node name="Eye2" type="Sprite2D" parent="."]
+position = Vector2(27, -2)
+
+[node name="Pupil" type="Node2D" parent="Eye2"]
+
+[node name="Sprite" type="Sprite2D" parent="Eye2/Pupil"]
+position = Vector2(3, -3)
+texture = ExtResource("5_wstnd")
+
+[node name="Mouth" type="Sprite2D" parent="."]
+position = Vector2(0.999998, 6)
+scale = Vector2(0.416667, 0.375)
+texture = ExtResource("6_vt5jm")
